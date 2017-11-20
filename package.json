@@ -1,0 +1,17 @@
+{
+  "name": "babel-preset-aws-lambda",
+  "version": "1.0.0",
+  "description": "AWS Lambda Preset",
+  "main": "index.js",
+  "author": "Ahmad Bamieh<ahmadbamieh@gmail.com>",
+  "license": "MIT",
+  "peerDepenencies": {
+    "@babel/core": "^7.0.0-beta.32",
+  },
+  "dependencies": {
+    "@babel/plugin-transform-async-to-generator": "^7.0.0-beta.32",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.32",
+    "@babel/plugin-transform-exponentiation-operator": "^7.0.0-beta.32",
+    "@babel/preset-env": "^7.0.0-beta.32"
+  }
+}
