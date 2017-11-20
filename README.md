@@ -43,11 +43,9 @@ require("babel-core").transform("code", {
 
 ### Targeting Environments
 
-This module uses babel-preset-env to target specific environments.
+This module uses `babel-preset-env` to target specific environments.
 
 Please refer to [babel-preset-env#targets](https://github.com/babel/babel-preset-env#targets) for a list of available options.
-
-For a list of browsers please see [browserlist](https://github.com/ai/browserslist).
 
 You may override our default list of targets by providing your own `targets` key.
 
@@ -61,7 +59,7 @@ You may override our default list of targets by providing your own `targets` key
 }
 ```
 
-You may override our default debug option by providing your own `debug` key.
+To enable debug mode, set the `debug` key to `true`.
 
 ```json
 {
