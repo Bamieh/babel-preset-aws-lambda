@@ -13,19 +13,16 @@ function buildAwsBabelPreset(ctx, config) {
         modules: false,
         exclude: [
           'transform-regenerator',
-        ]
-        targets: config.targets || defaultTargets
-      })
+        ],
+        targets: config.targets || defaultTargets,
+      }),
     ],
     plugins: [
       require('@babel/plugin-transform-async-to-generator'),
       require('@babel/plugin-transform-exponentiation-operator'),
-      [
-        require('@babel/plugin-proposal-object-rest-spread'),
-        {
-          useBuiltIns: true
-        }
-      ]
+      [require('@babel/plugin-proposal-object-rest-spread'), {
+        useBuiltIns: true,
+      }],
     ],
   };
 }

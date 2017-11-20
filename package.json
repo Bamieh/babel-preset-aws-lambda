@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-aws-lambda",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "AWS Lambda Preset",
   "main": "index.js",
   "author": "Ahmad Bamieh <ahmadbamieh@gmail.com>",
