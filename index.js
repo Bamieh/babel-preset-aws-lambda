@@ -1,11 +1,12 @@
 'use strict';
 
 var defaultTargets = {
-  node: "6.10"
+  node: "8.10"
 };
 
 function buildAwsBabelPreset(ctx, config) {
   config = config || {};
+  const isNode8 = /^8/.test((config.targets || defaultTargets).node);
   return {
     presets: [
       require('@babel/preset-env').default(null, {
@@ -18,12 +19,12 @@ function buildAwsBabelPreset(ctx, config) {
       }),
     ],
     plugins: [
-      require('@babel/plugin-transform-async-to-generator'),
-      require('@babel/plugin-transform-exponentiation-operator'),
-      [require('@babel/plugin-proposal-object-rest-spread'), {
+      (!isNode8 && require('@babel/plugin-transform-async-to-generator')),
+      (!isNode8 && require('@babel/plugin-transform-exponentiation-operator')),
+      (!isNode8 && [require('@babel/plugin-proposal-object-rest-spread'), {
         useBuiltIns: true,
-      }],
-    ],
+      }]),
+    ].filter(Boolean),
   };
 }
 
