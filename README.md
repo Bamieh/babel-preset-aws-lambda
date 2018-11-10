@@ -1,4 +1,7 @@
 # babel-preset-aws-lambda
+
+Works with babel 7. This package requires "@babel/core" as a peer dependency.
+
 > Babel preset for AWS λ functions
 
 This preset currently transforms code to be compatible with node versions of amazon AWS lambda funcions.
